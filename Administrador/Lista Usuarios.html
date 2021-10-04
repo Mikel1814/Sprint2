@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Usuarios</title>
+    <link rel="stylesheet" href="Estilos CSS/Lista Usuarios.css">
+    <div class="menu" z-index: 1;>
+        <nav>
+            <ul>
+                <li style="float:left;" class="name"><h1>Epsilon</h1></li>
+                <li style="float:right;"><a href="#">Salir</a>
+                <li style="float:right;"><a href="#">Novedades</a>
+                <li style="float:right;"><a href="#">Factura</a>
+                <li style="float:right;"><a href="#">Ventas</a>
+                <li style="float:right;"><a href="#">Productos</a>    
+                <li style="float:right;"><a href="#">Inicio</a></li>
+            </ul>
+        </nav>
+    </div>
+</head>
+<body>
+    <Section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="container">
+                <div class="form">
+                    <h2>Usuarios</h2>
+                    <form >
+                        <table width="100%">
+                            <tr class="users" >
+                                <td>Código</td>
+                                <td>Nombres</td>
+                                <td>Apellidos</td>
+                                <td>Documento</td>
+                                <td>Celular</td>
+                                <td class="rol">Rol</td>
+                            </tr>
+                            <tr class="information">
+                                <td>0001</td>
+                                <td>Oscar Danilo</td>
+                                <td>Reyes Briceño</td>
+                                <td>1031155272</td>
+                                <td>3143608552</td>
+                                <td><select class="selection" name="Rol">
+                                    <option hidden selected value="0"> Cambiar Rol </option>
+                                    <option value="1">Administrador</option> 
+                                    <option value="2">Vendedor</option> 
+                                </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>      
+    </Section>
+    <footer>
+        <p>2021, Epsilon Desarrolladores</p>
+    </footer>
+</html>
