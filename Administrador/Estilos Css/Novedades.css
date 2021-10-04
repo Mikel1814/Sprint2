@@ -1,0 +1,250 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppings',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #292929;
+    font-family: 'calibri';
+	overflow: hidden;
+}
+
+header {
+    background: #03A9F4;
+    width: 100%;
+    clear: both;
+    content:'';
+    display: table;
+}
+
+h1
+{
+    font-family: 'Comic Sans';
+}
+
+.menu{
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px;
+    background: rgb(70, 140, 253);
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0px 4px 3px rgb(0, 0, 0, .5);
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.name{
+    padding: 10px;
+}
+
+.menu li a{
+    display: block;
+    background: rgb(70, 140, 253);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    background: #192763;
+    color: #fff;
+}
+
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(to bottom,#3d77d6,#7bb6e4);
+    z-index: 2;
+}
+
+section .color{
+	position: absolute;
+	filter: blur(150px);
+}
+
+section .color:nth-child(1){
+top: -350px;
+width: 600px;
+height: 600px;
+background: #192763;
+z-index: 1;
+}
+
+section .color:nth-child(2){
+	top: 150px;
+   left: -125px;
+   width: 120px;
+   height: 120px;
+}
+
+section .color:nth-child(3){
+	bottom: 50px;
+	right: 100px;
+	width: 300px;
+	height: 300px;
+	background: #2ca1bb;
+}
+
+.container{
+	position: relative;
+	width: 90%;
+	height: 90%;
+	background: rgba(255,255,255,0.1);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter:blur(5px);
+	box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+	border: 1px solid rgba(255,255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.form{
+   position: relative;
+   width: 100%;
+   height: 100%;
+   padding: 20px;
+}
+
+.form h2
+{
+    width: 100%;
+    height: 20px;
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.form h2::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 80px;
+	height: 4px;
+	background: #192763;
+   animation: linea 5s infinite;
+}
+
+@keyframes linea{
+   0%,100%
+   {
+	   transform: translateX(0px);
+   }
+   50%
+   {
+	   transform: translateX(210px);
+   }
+}
+
+.form .inputBox
+{
+   text-align: center;
+   margin-top: 20px;
+   padding: 5px;
+}
+
+.form .inputBox input
+{
+   width: 95%;
+   background: rgba(255,255,255,0.2);
+   border: none;
+   outline: none;
+   padding: 10px 20px;
+   border-radius: 35px;
+   border: 1px solid rgba(255,255,255,0.5);
+	border-right: 1px solid rgba(255,255,255,0.2);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: rgb(0, 0, 0);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form .inputBox input::placeholder{
+   color: rgb(90, 90, 90);
+}
+
+.form .inputBox input[type="submit"]{
+   background: rgb(50, 100, 250);
+   color: rgb(0, 0, 0);
+   max-width: 200px;
+   cursor: pointer;
+   margin-bottom: 20px;
+   font-weight: 600;
+}
+
+.form .inputBox input[type="submit"]:hover{
+   background: #192763;
+   color: #fff;
+
+}
+
+.seleccion
+{
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.seleccion option
+{
+    background: #6da4fc;
+}
+
+.cuadro
+{
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 95%;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cuadro option
+{
+    background: #6da4fc;
+}
+
+footer
+{
+    position: absolute;
+    margin-top: -10px;
+    width: 100%;
+    clear: both;
+    padding: 10px;
+    background: rgb(70, 140, 253);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    bottom: 0;
+}
