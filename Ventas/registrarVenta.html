@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="Estilos css/registrarVenta.css">
+    <header>Registrar ventas</header>
+
+    <h2></h2>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <form id="form" class="topBefore">
+                        <div class="col-sm-auto">
+                            <input id="codVenta" type="text" placeholder="Código de venta" required>
+                        </div>
+                        <div class="col-sm-auto">
+                            <select id="producto" required>
+                                <option selected>Seleccione el producto...</option>
+                                <option value="1">Producto 1</option>
+                                <option value="2">Producto 2</option>
+                                <option value="3">Producto 3</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-auto">
+                            <input id="cantidad" type="text" placeholder="Cantidad" required>
+                        </div>
+                        <div class="col-sm-auto">
+                            <input id="valorUnit" type="text" placeholder="Valor unitario" required>
+                        </div>
+                        <textarea id="message" type="text" placeholder="Detalle" required></textarea>
+                        <div class="col-sm-auto">
+                            <input id="total" type="text" placeholder="Valor Total" disabled>
+                        </div>
+                        <input id="submit" type="submit" value="Registrar Venta">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+
+</html>
