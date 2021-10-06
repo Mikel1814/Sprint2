@@ -137,12 +137,12 @@ select {
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
-  }
+}
   
-  select:hover {
-	background: #b3aca7;
-	color: #e2dedb;
-  }
+select:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
 
 textarea {
   width: 470px;
@@ -172,6 +172,7 @@ textarea:hover {
 }
 
 #submit {
+  background: #b3aca7;
   width: 502px;
   
   padding: 0;
@@ -179,7 +180,7 @@ textarea:hover {
   
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
-  color: #b3aca7;
+  color: #0b041d;
   
   outline:none;
   cursor: pointer;
