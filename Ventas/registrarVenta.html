@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios</title>
+    <title>Ventas</title>
     <link rel="stylesheet" href="Estilos css/registrarVenta.css">
     <header>Registrar ventas</header>
 
@@ -13,7 +13,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <form id="form" class="topBefore">
+                    <form id="form" name="form" class="topBefore">
                         <div class="col-sm-auto">
                             <input id="codVenta" type="text" placeholder="Código de venta" required>
                         </div>
@@ -26,16 +26,22 @@
                             </select>
                         </div>
                         <div class="col-sm-auto">
-                            <input id="cantidad" type="text" placeholder="Cantidad" required>
+                            <input id="cantidad" id="name"  onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                type="text" placeholder="Cantidad" onkeyup="Total()" required>
                         </div>
                         <div class="col-sm-auto">
-                            <input id="valorUnit" type="text" placeholder="Valor unitario" required>
+                            <input id="valorUnit" name="valorUnit" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                type="text" placeholder="Valor unitario" onkeyup="Total()" required>
                         </div>
-                        <textarea id="message" type="text" placeholder="Detalle" required></textarea>
                         <div class="col-sm-auto">
-                            <input id="total" type="text" placeholder="Valor Total" disabled>
+                            <textarea id="message" type="text" placeholder="Detalle" required></textarea>
                         </div>
-                        <input id="submit" type="submit" value="Registrar Venta">
+                        <div class="col-sm-auto">
+                            <input id="total"  name="total"  type="text" placeholder="Valor Total" disabled>
+                        </div>
+                        <div class="col-sm-auto">
+                            <input id="submit" type="submit" value="Registrar Venta">
+                        </div>
 
                     </form>
                 </div>
@@ -45,3 +51,19 @@
 </head>
 
 </html>
+
+<script>
+    function Total() {
+        var cantidad = document.form.cantidad.value;
+        var valorUnit = document.form.valorUnit.value;
+        try {
+            //Calculamos el número escrito:
+            cantidad = (isNaN(parseInt(cantidad))) ? 0 : parseInt(cantidad);
+            valorUnit = (isNaN(parseInt(valorUnit))) ? 0 : parseInt(valorUnit);
+            document.form.total.value = cantidad * valorUnit;
+        }
+        //Si se produce un error no hacemos nada
+        catch (e) { }
+    }
+
+</script>
